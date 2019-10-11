@@ -1,11 +1,13 @@
+pragma solidity >=0.4.0 <0.6.0;
+
 contract test {
     int _multiplier;
 
-    function test(int multiplier){
+    constructor(int multiplier) public{
         _multiplier = multiplier;
     }
 
-    function multiply(int val) returns (int d) {
+    function multiply(int val) public returns (int d) {
         return val * _multiplier;    
     }
 }
